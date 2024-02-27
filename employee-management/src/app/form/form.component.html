@@ -1,0 +1,43 @@
+<h1>
+  Fill the form details:-
+</h1>
+
+<br>
+
+<div class="col-md-4">
+  <form (ngSubmit)="userInfo(f)" method="POST" #f="ngForm">
+
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" [(ngModel)]="employeeInfo.name" name="name" class="form-control" placeholder="Enter full name">
+    </div>
+
+    <div class="form-group">
+      <label>Gender</label>
+      <input type="text" [(ngModel)]="employeeInfo.gender" name="gender" class="form-control" placeholder="Enter gender">
+    </div>
+
+    <div class="form-group">
+      <label>Phone</label>
+      <input type="text" [(ngModel)]="employeeInfo.phone" name="phone" class="form-control" placeholder="Enter phone">
+    </div>
+
+    <div class="form-group">
+      <label>Birthday</label>
+      <input type="date" [(ngModel)]="employeeInfo.birthday" name="birthday" class="form-control" placeholder="Enter birthday">
+    </div>
+
+    <div class="form-group">
+      <label>Job Title</label>
+      <input type="text" [(ngModel)]="employeeInfo.jobTitle" name="jobTitle" class="form-control" placeholder="Enter job title">
+    </div>
+
+    <div class="form-group">
+      <label>Job Rank</label>
+      <input type="number" [(ngModel)]="employeeInfo.jobRank" name="jobRank" class="form-control" placeholder="Enter job rank">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+    <a [routerLink]="['/']"><button type="button" class="btn btn-default">Go home</button></a>
+  </form>
+</div>

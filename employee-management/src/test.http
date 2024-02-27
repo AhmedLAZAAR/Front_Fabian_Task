@@ -1,0 +1,38 @@
+
+
+
+PUT http://localhost:5175/api/DDD HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "hajar2",
+    "lastName": "manal2",
+    "Tele": "07080122517",
+    "County": "korea1",
+    "fireStartDate": "2018-06-20T04:00:00.000Z",
+    "fireEndDate": "2018-06-30T04:00:00.000Z",
+    "dddDate": "2023-02-18T23:09:17.278Z",
+    "fireIndex": 14,
+    "hectares": 130
+}
+
+### GET
+
+GET  http://localhost:32769/api/DDD/ HTTP/1.1
+
+### DELETE
+
+DELETE  http://localhost:5175/api/DDD/1 HTTP/1.1
+
+### 
+POST http://localhost:32769/api/DDD/ HTTP/1.1
+content-type: application/json
+
+{
+    
+    "name":"Salma12222222222",
+    "gender":"0654321987",
+    "phone":"Femme",
+    "birthday":"12-03-2000",
+    "jobTitle":"Software Engineer"
+}

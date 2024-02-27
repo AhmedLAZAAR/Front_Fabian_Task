@@ -1,0 +1,38 @@
+<!-- employee-list.component.html -->
+
+<h1>Employee List</h1>
+
+<div class="col-md-6">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Birthday</th>
+        <th scope="col">Job Title</th>
+        <th scope="col">Job Rank</th>
+        <th>Edit employee details</th>
+        <th>Delete employee details</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.gender}}</td>
+        <td>{{emp.phone}}</td>
+        <td>{{emp.birthday}}</td>
+        <td>{{emp.jobTitle}}</td>
+        <td>{{emp.jobRank}}</td>
+
+        <td><button class="btn btn-primary" (click)="editEmployeeDetails(emp.id)" type="button">Edit</button></td>
+        <td><button class="btn btn-danger" (click)="deleteEmployeeDetails(emp.id)" type="button">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a [routerLink]="['/']"><button class="btn btn-default" type="button">Go home</button></a>
+</div>
